@@ -14,7 +14,7 @@ $orange: #F68825;
 
 
 // Mixins
-@mixin lato($weight: 200) {
+@mixin lato($weight: 400) {
   font-family: 'Lato', sans-serif;
   font-weight: $weight;
 }
@@ -53,7 +53,7 @@ h2 {
 
 a {
   color: $orange;
-  font-weight: 100;
+  font-weight: 200;
   &:visited { color: $orange; }
 }
 
@@ -87,7 +87,7 @@ pre {
   font-weight: 700;
 }
 .font-orange { color: $orange }
-.font-thin { font-weight: 100; }
+.font-thin { @include lato(200); }
 
 .no-display { display: none; }
 .pad {
