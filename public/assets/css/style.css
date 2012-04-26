@@ -1,1 +1,85 @@
-body{font:300 24px/1.2 Lato,sans-serif;background:#fefefe;color:#413e3b;font-size:24px}h1{font-size:72px;margin-top:48px}h2{font-size:48px}a{color:#f68825;font-weight:300}a:visited{color:#f68825}pre{font-size:12px}#content{height:auto;margin:0 auto;width:980px}.box-full{float:left;margin:6px;max-height:1306.667px;width:968px;box-shadow:0px 0px 12px #7f7f7f}.box-1{float:left;margin:6px;max-height:653.333px;width:478px;box-shadow:0px 0px 12px #7f7f7f}.box-2{float:left;margin:6px;max-height:326.667px;width:233px;box-shadow:0px 0px 12px #7f7f7f}.box-3{float:left;margin:6px;max-height:163.333px;width:110.5px;box-shadow:0px 0px 12px #7f7f7f}.box-4{float:left;margin:6px;max-height:81.667px;width:49.25px;box-shadow:0px 0px 12px #7f7f7f}.font-center{text-align:center}.font-light{color:#c1beba}.font-museo{font-family:museo, serif;font-style:normal;font-weight:700}.font-orange{color:#f68825}.font-thin{font-weight:300}.no-display{display:none}.pad{clear:both;padding-top:24px}
+body {
+  font: 300 24px/1.2 Lato, sans-serif;
+  background: #fefefe;
+  color: #413e3b;
+  font-size: 24px; }
+
+h1 {
+  font-size: 72px;
+  margin-top: 48px; }
+
+h2 {
+  font-size: 48px; }
+
+a {
+  color: #f68825;
+  font-weight: 300; }
+  a:visited {
+    color: #f68825; }
+
+pre {
+  font-size: 12px; }
+
+#content {
+  height: auto;
+  margin: 0 auto;
+  width: 980px; }
+
+.box-full {
+  float: left;
+  margin: 6px;
+  max-height: 1306.667px;
+  width: 968px;
+  box-shadow: 0px 0px 12px #7f7f7f; }
+
+.box-1 {
+  float: left;
+  margin: 6px;
+  max-height: 653.333px;
+  width: 478px;
+  box-shadow: 0px 0px 12px #7f7f7f; }
+
+.box-2 {
+  float: left;
+  margin: 6px;
+  max-height: 326.667px;
+  width: 233px;
+  box-shadow: 0px 0px 12px #7f7f7f; }
+
+.box-3 {
+  float: left;
+  margin: 6px;
+  max-height: 163.333px;
+  width: 110.5px;
+  box-shadow: 0px 0px 12px #7f7f7f; }
+
+.box-4 {
+  float: left;
+  margin: 6px;
+  max-height: 81.667px;
+  width: 49.25px;
+  box-shadow: 0px 0px 12px #7f7f7f; }
+
+.font-center {
+  text-align: center; }
+
+.font-light {
+  color: #c1beba; }
+
+.font-museo {
+  font-family: museo, serif;
+  font-style: normal;
+  font-weight: 700; }
+
+.font-orange {
+  color: #f68825; }
+
+.font-thin {
+  font-weight: 300; }
+
+.no-display {
+  display: none; }
+
+.pad {
+  clear: both;
+  padding-top: 24px; }
