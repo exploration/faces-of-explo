@@ -1,16 +1,14 @@
 // Author: Donald L. Merand
 
 // Base Variables
-$page-width: 980px;
-$gutter-width: 12px;
-
-$font-color: #413E3B;
-$font-size: 24px;
-$line-height: 26px;
 $background: #FEFEFE;
-
-$pad: $font-size;
+$color: #413E3B;
+$font-size: 24px;
+$gutter-width: 12px;
+$line-height: 28px;
 $orange: #F68825;
+$pad: $font-size;
+$page-width: 980px;
 
 
 // Mixins
@@ -20,30 +18,27 @@ $orange: #F68825;
 }
 
 @mixin thumbnail-box($size: 2) {
-  float: left;
-
-  width: $page-width / $size - $gutter-width;
-  max-height: ($page-width / $size) * 4/3;
-  margin: $gutter-width / 2;
-
   box-shadow: 0px 0px 12px darken($background, 50%);
+  float: left;
+  margin: $gutter-width / 2;
+  max-height: ($page-width / $size) * 4/3;
+  width: $page-width / $size - $gutter-width;
 }
 
 
 // Body styles
 body {
-  color: $font-color;
-  background: $background;
-
   @include lato();
+  background: $background;
+  color: $color;
   font-size: $font-size;
   line-height: $line-height;
 }
 
 h1 {
-  margin-top: $pad * 2;
   font-size: $font-size * 3;
   line-height: $line-height * 3;
+  margin-top: $pad * 2;
 }
 
 h2 {
@@ -54,6 +49,7 @@ h2 {
 a {
   color: $orange;
   font-weight: 200;
+
   &:visited { color: $orange; }
 }
 
@@ -65,9 +61,9 @@ pre {
 
 // Page Elements
 #content {
-  width: $page-width;
   height: auto;
   margin: 0 auto;
+  width: $page-width;
 }
 
 
@@ -80,7 +76,7 @@ pre {
 
 
 .font-center { text-align: center; }
-.font-light { color: lighten($font-color, 50%); }
+.font-light { color: lighten($color, 50%); }
 .font-museo {
   font-family: museo,serif;
   font-style: normal;
