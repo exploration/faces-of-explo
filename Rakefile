@@ -8,28 +8,57 @@ remote_url = "www.explo.org"
 
 
 
+#usually I'm developing, and I just want all of my assets to compile...
 task :default => "watch:all"
 
-desc 'Compile CSS and CoffeeScripts'
-task :compile do
-  sh 'scss --update public/assets/css/'
-  sh 'coffee -c public/assets/scripts/*.coffee'
+namespace :compile do
+  scss_compile = "scss --update #{css_dir}"
+  coffee_compile = "coffee -c #{scripts_dir}"
+
+  desc 'Compile SCSS files'
+  task :scss do
+    sh scss_compile
+  end
+
+  desc 'Compile CoffeeScript files'
+  task :coffee do
+    sh coffee_compile
+  end
+
+  desc 'Compile all assets'
+  task :all do
+    sh scss_compile
+    sh coffee_compile
+  end
 end
 
 namespace :watch do
+  scss_watch = "scss --watch #{css_dir}"
+  coffee_watch = "coffee -w -c #{scripts_dir}" 
+
   desc "Watch SCSS files for changes"
-  task :watch_scss do
-    sh "scss --watch #{css_dir}"
+  task :scss do
+    system scss_watch
   end
 
   desc "Watch CoffeeScript files for changes"
-  task :watch_coffee do
-    sh "coffee -w -c #{scripts_dir}"
+  task :coffee do
+    system coffee_watch
   end
 
+  #copied/hacked this code from https://github.com/imathis/octopress/blob/master/Rakefile
   desc "Watch all assets for changes"
-  multitask :all => [:watch_scss, :watch_coffee] do
+  task :all do
     puts "monitoring assets for changes and auto-compiling..."
+    scssPid = Process.spawn(scss_watch)
+    coffeePid = Process.spawn(coffee_watch)
+
+    trap("INT") {
+      [scssPid, coffeePid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+      exit 0
+    }
+
+    [scssPid, coffeePid].each { |pid| Process.wait(pid) }
   end
 end
  
