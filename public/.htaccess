@@ -1,15 +1,15 @@
 DirectoryIndex index.html
 
 ## password begin ##
-AuthUserFile /usr/www/users/explo/facesofexplo/.passwd
-AuthName     "Protected"
-AuthType     Basic
-<Limit GET POST PUT>
-require valid-user
-</Limit>
-<Files .passwd>
-deny from all
-</Files>
+#AuthUserFile /usr/www/users/explo/facesofexplo/.passwd
+#AuthName     "Protected"
+#AuthType     Basic
+#<Limit GET POST PUT>
+#require valid-user
+#</Limit>
+#<Files .passwd>
+#deny from all
+#</Files>
 ## password end ##
 
 ## compression begin ##
