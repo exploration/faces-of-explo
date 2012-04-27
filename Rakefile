@@ -1,8 +1,10 @@
 #Author: Donald L. Merand
 
 local_site_dir = "public"
-scripts_dir = "#{local_site_dir}/assets/scripts"
-css_dir = "#{local_site_dir}/assets/css"
+assets_dir = "#{local_site_dir}/assets"
+scripts_dir = "#{assets_dir}/scripts"
+css_dir = "#{assets_dir}/css"
+images_dir = "#{assets_dir}/images"
 
 user = "explo"
 remote_url = "www.explo.org"
@@ -31,6 +33,14 @@ namespace :compile do
   task :all do
     sh scss_compile
     sh coffee_compile
+  end
+end
+
+
+namespace :images do
+  desc "prepare images for web"
+  task :prepare do
+    sh "find -E #{images_dir} -regex '.*\\.(jpg|png|gif)' -exec mogrify -strip -interlace line -quality 50 {} \\;"
   end
 end
 
