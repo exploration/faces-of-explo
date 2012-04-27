@@ -1,14 +1,14 @@
 local_site_dir = "public"
-remote_site_dir = "public_html/facesofexplo"
 scripts_dir = "#{local_site_dir}/assets/scripts"
 css_dir = "#{local_site_dir}/assets/css"
 
 user = "explo"
 remote_url = "www.explo.org"
+remote_site_dir = "public_html/facesofexplo"
 
 
 
-#usually I'm developing, and I just want all of my assets to compile...
+#usually I'm developing, and I just want all of my assets to compile as I work...
 task :default => "watch:all"
 
 namespace :compile do
