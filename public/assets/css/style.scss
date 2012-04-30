@@ -23,6 +23,13 @@ $page-width: 980px;
 
 
 // Body styles
+a {
+  color: $orange;
+  font-weight: 300;
+
+  &:visited { color: $orange; }
+}
+
 body {
   font: 300 #{$font-size}/#{$line-height} Lato, sans-serif;
   background: $background;
@@ -39,19 +46,17 @@ h2 {
   font-size: $font-size * 2;
 }
 
-a {
-  color: $orange;
-  font-weight: 300;
-
-  &:visited { color: $orange; }
-}
-
 pre {
   font-size: $font-size / 2;
 }
 
 
 // Page Elements
+#box-1 img { @include thumbnail-box(2); }
+#box-2 img { @include thumbnail-box(4); }
+#box-3 img { @include thumbnail-box(8); }
+#box-4 img { @include thumbnail-box(16); }
+
 #content {
   height: auto;
   margin: 0 auto;
@@ -60,13 +65,6 @@ pre {
 
 
 // Classes
-.box-full { @include thumbnail-box(1); }
-.box-1 { @include thumbnail-box(2); }
-.box-2 { @include thumbnail-box(4); }
-.box-3 { @include thumbnail-box(8); }
-.box-4 { @include thumbnail-box(16); }
-
-
 .font-center { text-align: center; }
 .font-light { color: lighten($color, 50%); }
 .font-museo {

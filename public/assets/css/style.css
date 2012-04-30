@@ -1,3 +1,9 @@
+a {
+  color: #f68825;
+  font-weight: 300; }
+  a:visited {
+    color: #f68825; }
+
 body {
   font: 300 24px/1.2 Lato, sans-serif;
   background: #fefefe;
@@ -11,54 +17,41 @@ h1 {
 h2 {
   font-size: 48px; }
 
-a {
-  color: #f68825;
-  font-weight: 300; }
-  a:visited {
-    color: #f68825; }
-
 pre {
   font-size: 12px; }
 
-#content {
-  height: auto;
-  margin: 0 auto;
-  width: 980px; }
-
-.box-full {
-  float: left;
-  margin: 6px;
-  max-height: 1306.667px;
-  width: 968px;
-  box-shadow: 0px 0px 12px #7f7f7f; }
-
-.box-1 {
+#box-1 img {
   float: left;
   margin: 6px;
   max-height: 653.333px;
   width: 478px;
   box-shadow: 0px 0px 12px #7f7f7f; }
 
-.box-2 {
+#box-2 img {
   float: left;
   margin: 6px;
   max-height: 326.667px;
   width: 233px;
   box-shadow: 0px 0px 12px #7f7f7f; }
 
-.box-3 {
+#box-3 img {
   float: left;
   margin: 6px;
   max-height: 163.333px;
   width: 110.5px;
   box-shadow: 0px 0px 12px #7f7f7f; }
 
-.box-4 {
+#box-4 img {
   float: left;
   margin: 6px;
   max-height: 81.667px;
   width: 49.25px;
   box-shadow: 0px 0px 12px #7f7f7f; }
+
+#content {
+  height: auto;
+  margin: 0 auto;
+  width: 980px; }
 
 .font-center {
   text-align: center; }
