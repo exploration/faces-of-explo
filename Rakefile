@@ -6,9 +6,9 @@ scripts_dir = "#{assets_dir}/scripts"
 css_dir = "#{assets_dir}/css"
 images_dir = "#{assets_dir}/images"
 
-user = "explo"
-remote_url = "www.explo.org"
-remote_site_dir = "public_html/facesofexplo"
+user = "exploapps"
+remote_url = "lab.explo.org"
+remote_site_dir = "public_html/lab/facesofexplo"
 
 
 #usually I'm developing, and I just want all of my assets to compile as I work...
